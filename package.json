@@ -1,0 +1,50 @@
+{
+  "name": "paytm-mini-programs-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "A Node client SDK for interacting with Paytm's Mini Programs ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive 'test/**/*.test.js'",
+    "docs": "rm -rf ./docs && ./node_modules/.bin/jsdoc package.json index.js clients/** lib/** config/** README.md -d docs",
+    "lint": "./node_modules/.bin/jshint ./**",
+    "coverage": "./node_modules/.bin/nyc --reporter=html npm test",
+    "prepare": "npm run lint && npm run docs",
+    "prepublishOnly": "rm -rf ./node_modules/ && npm install && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paytm/paytm-mini-programs-nodejs-sdk"
+  },
+  "engines": {
+    "node": ">=8.17.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "author": "Paytm",
+  "homepage": "https://github.com/paytm/paytm-mini-programs-nodejs-sdk",
+  "dependencies": {
+    "debug": "~4.1.1",
+    "moment": "~2.24.0",
+    "request": "~2.88.2",
+    "request-promise": "~4.2.5",
+    "uuid": "~7.0.3"
+  },
+  "devDependencies": {
+    "chai": "~4.2.0",
+    "chai-as-promised": "~7.1.1",
+    "jsdoc": "~3.6.3",
+    "jshint": "~2.11.0",
+    "mocha": "~7.1.1",
+    "nock": "~12.0.3",
+    "nyc": "~15.0.1",
+    "sinon": "~9.0.1"
+  },
+  "files": [
+    "index.js",
+    "clients/",
+    "config/",
+    "lib/"
+  ]
+}
