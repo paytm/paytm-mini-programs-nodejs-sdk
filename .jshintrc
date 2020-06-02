@@ -1,0 +1,9 @@
+{
+    "esversion": 9,
+    "node": true,
+    "strict": true,
+    "unused": true,
+    "varstmt": true,
+    "maxdepth": 3,
+    "nocomma": true
+}
