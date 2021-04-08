@@ -24,7 +24,7 @@ node -v
 * Install with npm:
 
 ```sh
-npm install paytm-mini-programs-nodejs-sdk
+npm install
 ```
 
 ## Usage
